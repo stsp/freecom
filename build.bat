@@ -96,12 +96,11 @@ echo.
 echo Checking SUPPL library
 cd suppl
 if exist skip goto endSuppl
-:aga
 echo Building SUPPL library
 del watcomc.cfg
 %MAKE% suppl.mak all
-if errorlevel 1 goto ende
-goto aga
+if errorlevel 1 exit 1
+exit 0
 cd src
 %MAKE% suppl.mak all
 if errorlevel 1 goto ende
