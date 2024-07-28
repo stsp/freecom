@@ -98,6 +98,7 @@ cd suppl
 if exist skip goto endSuppl
 echo Building SUPPL library
 del watcomc.cfg
+set
 %MAKE% suppl.mak all
 if errorlevel 1 exit 1
 exit 0
